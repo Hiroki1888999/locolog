@@ -1,0 +1,10 @@
+  <div class="contents row">
+    <h3>
+      編集する
+    </h3>
+    <%= form_for(@article, :url => {:controller => :articles, :action => :update}) do |f| %>
+      <%= f.url_field :image, placeholder: "Image Url", value: @article.image, autofocus: true %>
+      <%= f.text_area :text, cols: "30", rows: "10", placeholder: "text", value: @article.text %>
+      <%= f.submit "SENT" %>
+    <% end %>
+  </div>
